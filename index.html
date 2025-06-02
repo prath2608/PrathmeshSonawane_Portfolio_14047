@@ -144,17 +144,21 @@
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+   <section id="contact" class="section contact">
     <div class="container">
       <h2>Contact Me</h2>
-      <form id="contactForm">
+      <form id="contactForm" novalidate>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name"  />
+        <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" />
+
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email"  />
+        <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" />
+
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" ></textarea>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
         <button type="submit">Send Message</button>
+        <div id="formMessage"></div>
       </form>
     </div>
   </section>

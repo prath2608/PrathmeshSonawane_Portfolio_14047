@@ -24,76 +24,86 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Simple contact form submission handling
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Here you can add actual form submission logic
-    alert('Thank you for contacting me, ' + contactForm.name.value + '! I will get back to you soon.');
-    contactForm.reset();
-  });
+  
 });
 
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const nameField = document.getElementById('name');
-  const emailField = document.getElementById('email');
-  const messageField = document.getElementById('message');
-  const messageBox = document.getElementById('formMessage');
+ document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contactForm');
+      const nameField = document.getElementById('name');
+      const emailField = document.getElementById('email');
+      const messageField = document.getElementById('message');
+      const messageBox = document.getElementById('formMessage');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        messageBox.textContent = ''; // Clear previous message
 
-    const name = nameField.value.trim();
-    const email = emailField.value.trim();
-    const message = messageField.value.trim();
+        const name = nameField.value.trim();
+        const email = emailField.value.trim();
+        const message = messageField.value.trim();
 
-    // STRONG validation patterns
-    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ'.\s-]{2,50}$/; // allows names like "O'Connor", "Ana María"
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        // Validation patterns
+        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ'.\s-]{2,50}$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (!name || !email || !message) {
-      showMessage('Please fill out all fields.', 'red');
-      return;
-    }
+        // Validate fields
+        if (!name || !email || !message) {
+          showMessage('⚠️ Please fill out all fields.', 'red');
+          return;
+        }
 
-    if (!nameRegex.test(name)) {
-      showMessage('Please enter a valid name (letters, spaces, apostrophes, 2-50 characters).', 'red');
-      return;
-    }
+        if (!nameRegex.test(name)) {
+          showMessage('⚠️ Name must be 2–50 characters and contain only letters, spaces, hyphens, or apostrophes.', 'red');
+          return;
+        }
 
-    if (!emailRegex.test(email)) {
-      showMessage('Please enter a valid email address.', 'red');
-      return;
-    }
+        if (!emailRegex.test(email)) {
+          showMessage('⚠️ Please enter a valid email address (e.g., you@example.com).', 'red');
+          return;
+        }
 
-    if (message.length < 10) {
-      showMessage('Message should be at least 10 characters long.', 'red');
-      return;
-    }
+        if (message.length < 10) {
+          showMessage('⚠️ Message must be at least 10 characters long. Please add more details.', 'red');
+          return;
+        }
 
-    // Success
-    showMessage('Your message has been sent successfully!', 'green');
-    form.reset();
-  });
+        // If all valid
+        showMessage('✅ Thank you! Your message has been sent successfully.', 'green');
+        form.reset();
+      });
 
-  function showMessage(msg, color) {
-    messageBox.textContent = msg;
-    messageBox.style.color = color;
-  }
-});
+      function showMessage(msg, color) {
+        messageBox.textContent = msg;
+        messageBox.style.color = color;
+      }
+    });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const scrollTopBtn = document.getElementById('scrollTopBtn');
+//   const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+//   // Scroll to top
+//   scrollTopBtn.addEventListener('click', () => {
+//     window.scrollTo({
+//       top: 0,
+//       behavior: 'smooth'
+//     });
+//   });
+
+//   // Scroll to bottom
+//   scrollBottomBtn.addEventListener('click', () => {
+//     window.scrollTo({
+//       top: document.body.scrollHeight,
+//       behavior: 'smooth'
+//     });
+//   });
+// });
 
 
 
-
-
-
-
-/**jquery */
 
 $(document).ready(function() {
   const $scrollTopBtn = $('#scrollTopBtn');
