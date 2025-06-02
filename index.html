@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prathmesh Sonawane's personal web developer portfolio. Projects, skills, and contact information." />
+  <title>Prathmesh Sonawane</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- jQuery CDN (latest version) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Prathmesh</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skill</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <section id="home" class="section home">
+    <div class="container">
+      <h2>Hello, I'm <span class="highlight">Prathmesh Sonawane</span></h2>
+      <p>I'm a web developer passionate about building websites and apps.</p>
+    </div>
+  </section>
+
+ <section id="about" class="about section">
+  <div class="container">
+    <div class="section-title">
+      <h2>About</h2>
+      <p>"Something arises from his necessities; indeed, he flees from it — yet let him be a man of steadfast will."</p>
+    </div>
+
+    <div class="about-wrapper">
+      <div class="about-img">
+        <img src="./resources/prathmesh.jpeg" alt="Prathmesh Sonawane" />
+      </div>
+
+      <div class="about-content">
+        <h2>Web Developer</h2>
+        <h3>Prathmesh Sonawane</h3>
+
+        <div class="about-details">
+          <ul>
+            <li><strong>Birthday:</strong> 26 Aug 1999</li>
+            <li><strong>Website:</strong> www.example.com</li>
+            <li><strong>Phone:</strong> 8805873176</li>
+            <li><strong>City:</strong> Mumbai</li>
+          </ul>
+          <ul>
+            <li><strong>Age:</strong> 25</li>
+            <li><strong>Degree:</strong> B.Tech</li>
+            <li><strong>Email:</strong> prathmeshrs125@gmail.com</li>
+            <li><strong>Freelance:</strong> Available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="skills" class="skills section">
+    <div class="container section-title">
+      <h2>Skills</h2>
+    </div>
+    <div class="container">
+      <div class="row skills-content">
+        <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">HTML <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="progress">
+            <span class="skill">CSS <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">JAVA <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="progress">
+            <span class="skill">MySQL <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="progress">
+            <span class="skill">Spring Boot <i class="val">55%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 55%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume section">
+    <div class="container section-title">
+      <h2>Resume</h2>
+      <p>You can view or download my CV below.</p>
+    </div>
+
+    <div class="container resume-container">
+      <iframe 
+        src="./resources/Prathmesh_Sonawane_CV.pdf" 
+        frameborder="0"
+        class="resume-iframe"
+        title="Prathmesh Sonawane Resume">
+      </iframe>
+
+      <div class="download-btn-container">
+        <a href="./resources/Prathmesh_Sonawane_CV.pdf" download class="download-btn">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <button id="scrollTopBtn">⬆️ Scroll to Top</button>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Prathmesh Sonawane. All rights reserved.</p>
+
+    <div class="social-icons">
+      <a href="https://github.com/prathmeshsonawane" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/prathmeshsonawane" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:prathmeshrs125@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://twitter.com/prathmesh_dev" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+  
+  <script src="./javascript/script.js"></script>
+</body>
+</html>
